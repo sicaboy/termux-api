@@ -19,6 +19,14 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
+
+    <uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+
+
     <!-- Some of the used permissions imply uses-feature, so we need to make it optional.
          See http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions -->
     <uses-feature android:name="android.hardware.camera" android:required="false" />
@@ -53,6 +61,8 @@
                   android:excludeFromRecents="true"
                   android:exported="false"/>
         <service android:name="com.termux.api.SpeechToTextAPI$SpeechToTextService"/>
+
+        <service android:name=".AutoAirplaneModeService" />
         <service android:name="com.termux.api.TextToSpeechAPI$TextToSpeechService" />
         <provider android:authorities="com.termux.sharedfiles"
             android:readPermission="com.termux.sharedfiles.READ"
