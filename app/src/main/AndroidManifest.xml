@@ -62,7 +62,6 @@
                   android:exported="false"/>
         <service android:name="com.termux.api.SpeechToTextAPI$SpeechToTextService"/>
 
-        <service android:name=".AutoAirplaneModeService" />
         <service android:name="com.termux.api.TextToSpeechAPI$TextToSpeechService" />
         <provider android:authorities="com.termux.sharedfiles"
             android:readPermission="com.termux.sharedfiles.READ"
